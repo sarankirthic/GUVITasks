@@ -1,35 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="css/questions.css">
     <style>
-        div {
-            box-sizing: content-box;
+        .card-form {
+            height: 350px;
         }
     </style>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-    <h2>Question 3</h2>
-    <h2> Contact Us</h2>
-    <div></div>
-        <form action="/submit-form" method="post">
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" required><br><br>
+    <form class="card-form">
+        <h2>Question 3</h2>
+        <h3> Contact Us</h3>
 
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
 
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="5" required></textarea><br><br>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
 
-            <button type="submit">Send</button>
-        </form>
-    </div>
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea style="resize: none; width: 98%" id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="submit-btn">Submit</button>
+        </div>
+
+        <div class="form-group">
+            <input type="button" value="Go back!" onclick="history.back()">
+        </div>
+    </form>
 </body>
 <!-- Not part of the task -->
-<footer>
-    <a href="index.html"><button type="submit">Go back!</button></a>
-</footer>
 <!-- Not part of the task -->
 </html>

@@ -1,51 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="css/questions.css">
+    <style>
+        .card-form {
+            height: 600px;
+        }
+    </style>
     <meta charset="UTF-8">
-    <title>Question 8</title>
+    <title>Question 9</title>
 </head>
 <body>
-    <h2>Question 9</h2>
-    <form action="">
-        <label for="fname">First name:</label>
-        <input type="text" id="fname" name="fname" value="Saran"><br><br>
-
-        <label for="lname">Last name:</label>
-        <input type="text" id="lname" name="fname" value="Kirthic"><br><br>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" value="sarankirthic@gmail.com"><br><br>
-
-        <label for="dob">Date of Birth:</label>
-        <input type="date" id="dob" name="dob" value="2001-07-31"><br><br>
-
-        <label for="age">Age:</label>
-        <input type="number" id="age" name="age" value="23"><br><br>
-
-        <lable>Gender</lable><br><br>
-        <label for="male">Male:</label>
-        <input type="radio" id="male" name="gender" value="male"><br>
-
-        <label for="female">Female:</label>
-        <input type="radio" id="female" name="gender" value="female"><br><br>
-
-        <label for="vehicle">Vehicle:</label>
-        <input type="checkbox" id="vehicle" name="vehicle" value="bike" checked><br><br>
-
-        <label for="cars">Choose type of car you own:</label>
-        <select id="cars" name="cars">
-            <option value="hatchback">Hatchback</option>
-            <option value="sedan">Sedan</option>
-            <option value="suv">SUV</option>
-            <option value="minivan">Minivan</option>
-            <option value="convertible">Convertible</option>
-            <option value="spports car">Sports Car</option>
-        </select>
+    <form class="card-form">
+        <h2>Question 9</h2>
+        <div class="form-group">
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname" value="Saran"><br><br>
+        </div>
+        <div class="form-group">
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="fname" value="Kirthic"><br><br>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="sarankirthic@gmail.com"><br><br>
+        </div>
+        <div class="form-group">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" value="2001-07-31"><br><br>
+        </div>
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" value="23"><br><br>
+        </div>
+        <div class="radio-option">
+            <lable>Gender</lable><br><br>
+            <label for="male">Male:</label>
+            <input type="radio" id="male" name="gender" value="male"><br>
+        </div>
+        <div class="radio-option">
+            <label for="female">Female:</label>
+            <input type="radio" id="female" name="gender" value="female"><br><br>
+        </div>
+        <div class="radio-option">
+            <label for="vehicle">Vehicle:</label>
+            <input type="checkbox" id="vehicle" name="vehicle" value="bike" checked><br><br>
+        </div>
+        <div class="form-group">
+            <label for="cars" style="font-weight: bold">Choose type of car you own:</label>
+            <select id="cars" name="cars">
+                <option value="hatchback">Hatchback</option>
+                <option value="sedan">Sedan</option>
+                <option value="suv">SUV</option>
+                <option value="minivan">Minivan</option>
+                <option value="convertible">Convertible</option>
+                <option value="spports car">Sports Car</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="submit-btn">Submit</button>
+        </div>
+        <div class="form-group">
+            <input type="button" value="go back" onclick="history.back()" class="submit-btn">
+        </div>
     </form>
 </body>
-<!-- Not part of the task -->
-<footer>
-    <a href="index.html"><button type="submit">Go back!</button></a>
-</footer>
-<!-- Not part of the task -->
 </html>

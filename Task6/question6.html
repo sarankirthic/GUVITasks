@@ -1,30 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
+    <link rel="stylesheet" href="css/questions.css">
+    <style>
+        .card-form {
+            width: 336px;
+            height: 275px;
+            background: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 10px 15px;
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
+    </style>
+    </style>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-<h2>Question 6</h2>
-<h2>Employee Details</h2>
-<form action="/submit-form" method="post">
-  <label for="name">Name:</label><br>
-  <input type="text" id="name" name="name" required><br><br>
+<form class="card-form">
+    <h2>Question 6</h2>
+    <h2>Employee Details</h2>
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+    </div>
 
-  <label for="email">Email:</label><br>
-  <input type="email" id="email" name="email" required><br><br>
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    </div>
 
-  <label for="salaried">Salaried</label>
-  <input type="radio" id="salaried" value="salaried" name="employee_type"><br>
+    <div class="radio-option">
+        <label for="salaried">Salaried</label>
+        <input type="radio" id="salaried" value="salaried" name="employee_type">
+    </div>
+    <div class="radio-option">
+        <label for="own_business">Own business</label>
+        <input type="radio" id="own_business" value="own_business" name="employee_type">
+    </div>
+    <div class="form-group">
+        <button type="submit" class="submit-btn">Send</button>
+    </div>
 
-  <label for="own_business">Own business</label>
-  <input type="radio" id="own_business" value="own_business" name="employee_type"><br><br>
-
-  <button type="submit">Send</button>
+    <div class="form-group">
+        <input type="button" value="go back" onclick="history.back()" class="submit-btn">
+    </div>
 </form>
 <!-- Not part of the task -->
 <footer>
-  <a href="index.html"><button type="submit">Go back!</button></a>
 </footer>
 <!-- Not part of the task -->
 </body>

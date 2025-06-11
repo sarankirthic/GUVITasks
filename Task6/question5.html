@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="css/questions.css">
     <meta charset="UTF-8">
     <title>Page Redirector</title>
 </head>
 <body>
-    <h2>Question 5</h2>
-    <div>
-        <h1>You will be redirected to google.com if you click on this button.</h1>
-        <a href="https://google.com" target="_blank">Google</a>
-    </div>
+    <form>
+        <h1 style="text-align: center">Question 5</h1>
+        <div class="form-group">
+            <h1>You will be redirected to google.com if you click on this button.</h1>
+            <button class="submit-btn"><a href="https://google.com" target="_blank">Google</a></button>
+        </div>
+
+        <div class="form-group">
+            <input type="button" value="Go back!" onclick="history.back()">
+        </div>
+    </form>
 </body>
-<!-- Not part of the task -->
-<footer>
-    <a href="index.html"><button type="submit">Go back!</button></a>
-</footer>
-<!-- Not part of the task -->
 </html>
