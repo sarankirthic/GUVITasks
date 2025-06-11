@@ -1,15 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Question 7</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 600px;
+        }
+        td, th {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+            vertical-align: top;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Question 7</title>
 </head>
 <body>
 <h2>Question 8</h2>
+
+<table>
+    <tr>
+        <th rowspan="4">Customer<br>Name</th>
+        <th colspan="3">Items</th>
+        <th colspan="2">Payments</th>
+    </tr>
+    <tr>
+        <td>Item1</td>
+        <td>5</td>
+        <td>$400.00</td>
+        <td>12 Sep 2018</td>
+        <td>$3,000.00</td>
+    </tr>
+    <tr>
+        <td>Item2</td>
+        <td>10</td>
+        <td>$200.00</td>
+        <td rowspan="2">18 Sep 2018</td>
+        <td rowspan="2">$2,000.00</td>
+    </tr>
+    <tr>
+        <td>Item3</td>
+        <td>2</td>
+        <td>$500.00</td>
+    </tr>
+</table>
 </body>
 <!-- Not part of the task -->
 <footer>
-  <a href="index.html">Click here to back to the index page.</a>
+    <a href="index.html"><button type="submit">Go back!</button></a>
 </footer>
 <!-- Not part of the task -->
 </html>

@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        div {
+            box-sizing: content-box;
+        }
+    </style>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
     <h2>Question 3</h2>
     <h2> Contact Us</h2>
-    <form action="/submit-form" method="post">
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name" required><br><br>
+    <div></div>
+        <form action="/submit-form" method="post">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
 
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
 
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="5" required></textarea><br><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="5" required></textarea><br><br>
 
-        <button type="submit">Send</button>
-    </form>
+            <button type="submit">Send</button>
+        </form>
+    </div>
 </body>
 <!-- Not part of the task -->
 <footer>
-    <a href="index.html">Click here to back to the index page.</a>
+    <a href="index.html"><button type="submit">Go back!</button></a>
 </footer>
 <!-- Not part of the task -->
 </html>
