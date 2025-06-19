@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,48 +8,73 @@
         div .card a:hover:not(.active) {
             background-color: #5f00b0;
         }
+
+        .float-container {
+            margin: 1rem;
+            padding: 2rem 2rem;
+            text-align: left;
+            padding-left: 20%;
+        }
+
+        .float-child {
+            display: inline-block;
+            padding: 1rem 1rem;
+            vertical-align: middle;
+        }
     </style>
 </head>
-<body style="display: flex; justify-content: center; align-items: center; padding-top: 15%;">
-    <div class="container card p-3 mt-5" style="max-width: 30%; margin: auto; background-color: #f8f9fa; border-radius: 10px;">
-        <div class="row" style="display: flex; justify-content: center;">
-            <div class="col-12 p-3"style="display: flex; justify-content: center;">
-                <label for="display"></label>
-                <input id="display" type="text" class="form-control" style="max-width:90%;" disabled>
-            </div>
-            <div class="row p-3 text-center" style="display: flex; justify-content: space-around;">
-                <div class="col-3 card" style="max-width: 20%; color: red; border: none; background-color: #f8f9fa;" onclick="clearDisplay()">C</div>
-                <div class="col-3 card" style="max-width: 20%; border: none; background-color: #f8f9fa;" onclick="backspace()"><--</div>
-                <div class="col-3 card" style="max-width: 20%; border: none; background-color: #f8f9fa;" onclick="setValue('.')">.</div>
-                <div class="col-3 card" style="max-width: 20%; color: blue; border: none; background-color: #f8f9fa;" onclick="setValue('X')">X</div>
-            </div>
-            <div class="row p-3 text-center" style="display: flex; justify-content: space-around;">
-                <div class="col-3 card" style="max-width: 20%; border: none; background-color: #f8f9fa;" onclick="setValue(7)">7</div>
-                <div class="col-3 card" style="max-width: 20%; border: none; background-color: #f8f9fa;" onclick="setValue(8)">8</div>
-                <div class="col-3 card" style="max-width: 20%; border: none; background-color: #f8f9fa;" onclick="setValue(9)">9</div>
-                <div class="col-3 card" style="max-width: 20%; color: blue; border: none; background-color: #f8f9fa;" onclick="setValue('/')">/</div>
-            </div>
-            <div class="row p-3 text-center" style="display: flex; justify-content: space-around;">
-                <div class="col-3 card" style="max-width: 20%; border: none; background-color: #f8f9fa;" onclick="setValue(4)">4</div>
-                <div class="col-3 card" style="max-width: 20%; border: none; background-color: #f8f9fa;" onclick="setValue(5)">5</div>
-                <div class="col-3 card" style="max-width: 20%; border: none; background-color: #f8f9fa;" onclick="setValue(6)">6</div>
-                <div class="col-3 card" style="max-width: 20%; color: blue; border: none; background-color: #f8f9fa;" onclick="setValue('-')">-</div>
-            </div>
-            <div class="row p-3 text-center" style="display: flex; justify-content: space-around;">
-                <div class="col-3 card" style="max-width: 20%; border: none; background-color: #f8f9fa;" onclick="setValue(1)">1</div>
-                <div class="col-3 card" style="max-width: 20%; border: none; background-color: #f8f9fa;" onclick="setValue(2)">2</div>
-                <div class="col-3 card" style="max-width: 20%; border: none; background-color: #f8f9fa;" onclick="setValue(3)">3</div>
-                <div class="col-3 card" style="max-width: 20%; color: blue; border: none; background-color: #f8f9fa;" onclick="setValue('+')">+</div>
-            </div>
-            <div class="row p-3 text-center" style="display: flex; justify-content: space-around;">
-                <div class="col-3 card" style="max-width: 20%; border: none; background-color: #f8f9fa;" onclick="setValue(0)">0</div>
-                <div class="col-3 card" style="max-width: 20%; border: none; background-color: #f8f9fa;" onclick="setValue('00')">00</div>
-                <div class="col-6 card" style="max-width: 44%; border: none; background-color: #4771eb; color: white;" onclick="calculate()">=</div>
+<body>
+    <div class="container" style="text-align: center; padding-top: 10%;">
+        <div class="container card p-3 mt-5" style="max-width: 30%; margin: auto; background-color: #f8f9fa; border-radius: 10px;">
+            <h1 style="padding-bottom: 0; margin-bottom: 0">Calculator</h1>
+            <div class="row" style="display: flex; justify-content: center;">
+                <div class="col-12 p-3"style="display: flex; justify-content: center;">
+                    <label for="display"></label>
+                    <input id="display" type="text" class="form-control" style="max-width:90%;">
+                </div>
+                <div class="row p-3 text-center" style="display: flex; justify-content: space-around;">
+                    <div class="col-3 card" style="max-width: 20%; color: red; border: none; background-color: #f8f9fa;" onclick="clearDisplay()">C</div>
+                    <div class="col-3 card" style="max-width: 20%; border: none; background-color: #f8f9fa;" onclick="backspace()"><--</div>
+                    <div class="col-3 card" style="max-width: 20%; border: none; background-color: #f8f9fa;" onclick="setValue('.')">.</div>
+                    <div class="col-3 card" style="max-width: 20%; color: blue; border: none; background-color: #f8f9fa;" onclick="setValue('X')">X</div>
+                </div>
+                <div class="row p-3 text-center" style="display: flex; justify-content: space-around;">
+                    <div class="col-3 card" style="max-width: 20%; border: none; background-color: #f8f9fa;" onclick="setValue(7)">7</div>
+                    <div class="col-3 card" style="max-width: 20%; border: none; background-color: #f8f9fa;" onclick="setValue(8)">8</div>
+                    <div class="col-3 card" style="max-width: 20%; border: none; background-color: #f8f9fa;" onclick="setValue(9)">9</div>
+                    <div class="col-3 card" style="max-width: 20%; color: blue; border: none; background-color: #f8f9fa;" onclick="setValue('/')">/</div>
+                </div>
+                <div class="row p-3 text-center" style="display: flex; justify-content: space-around;">
+                    <div class="col-3 card" style="max-width: 20%; border: none; background-color: #f8f9fa;" onclick="setValue(4)">4</div>
+                    <div class="col-3 card" style="max-width: 20%; border: none; background-color: #f8f9fa;" onclick="setValue(5)">5</div>
+                    <div class="col-3 card" style="max-width: 20%; border: none; background-color: #f8f9fa;" onclick="setValue(6)">6</div>
+                    <div class="col-3 card" style="max-width: 20%; color: blue; border: none; background-color: #f8f9fa;" onclick="setValue('-')">-</div>
+                </div>
+                <div class="row p-3 text-center" style="display: flex; justify-content: space-around;">
+                    <div class="col-3 card" style="max-width: 20%; border: none; background-color: #f8f9fa;" onclick="setValue(1)">1</div>
+                    <div class="col-3 card" style="max-width: 20%; border: none; background-color: #f8f9fa;" onclick="setValue(2)">2</div>
+                    <div class="col-3 card" style="max-width: 20%; border: none; background-color: #f8f9fa;" onclick="setValue(3)">3</div>
+                    <div class="col-3 card" style="max-width: 20%; color: blue; border: none; background-color: #f8f9fa;" onclick="setValue('+')">+</div>
+                </div>
+                <div class="row p-3 text-center" style="display: flex; justify-content: space-around;">
+                    <div class="col-3 card" style="max-width: 20%; border: none; background-color: #f8f9fa;" onclick="memoryAdd()">M+</div>
+                    <div class="col-3 card" style="max-width: 20%; border: none; background-color: #f8f9fa;" onclick="memorySubtract()">M-</div>
+                    <div class="col-3 card" style="max-width: 20%; border: none; background-color: #f8f9fa;" onclick="memoryClear()">MC</div>
+                    <div class="col-3 card" style="max-width: 20%; border: none; background-color: #f8f9fa;" onclick="memoryRecall()">MR</div>
+                </div>
+                <div class="row p-3 text-center" style="display: flex; justify-content: space-around;">
+                    <div class="col-3 card" style="max-width: 20%; border: none; background-color: #f8f9fa;" onclick="setValue(0)">0</div>
+                    <div class="col-3 card" style="max-width: 20%; border: none; background-color: #f8f9fa;" onclick="setValue('00')">00</div>
+                    <div class="col-6 card" style="max-width: 44%; border: none; background-color: #4771eb; color: white;" onclick="calculate()">=</div>
+                </div>
             </div>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.3.0/math.min.js"></script>
     <script>
         const displayEl = document.getElementById("display")
+        let memory = 0;
+
         function setValue(value) {
             displayEl.value = displayEl.value + value;
         }
@@ -60,20 +84,107 @@
         }
 
         function calculate() {
-            let expression = displayEl.value;
-            if (expression.includes('X')) {
-                expression = expression.replace(/X/g, '*');
-            }
+            let expression = displayEl.value.replace(/X/g, '*'); // Replace 'X' with '*'
+
             try {
-                displayEl.value = eval(expression);
+                displayEl.value = math.evaluate(expression);
             } catch (error) {
                 displayEl.value = "Error";
             }
         }
 
+        // Not handling multiple operators or complex expressions
+        // function calculate() {
+        //     let expression = displayEl.value;
+        //     if (expression.includes('X')) {
+        //         expression = expression.replace(/X/g, '*');
+        //     }
+        //     try {
+        //         displayEl.value = eval(expression);
+        //     } catch (error) {
+        //         displayEl.value = "Error";
+        //     }
+        // }
+
         function backspace() {
             displayEl.value = displayEl.value.slice(0, -1);
         }
+
+        displayEl.addEventListener("keydown", function(event) {
+            const allowedKeys = [
+                '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
+                '+', '-', '*', '/', '.',
+                'Backspace', 'Enter', 'Delete', 'ArrowRight', "ArrowLeft", 'Tab', 'Shift', 'Escape'
+            ];
+
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                calculate();
+                return;
+            }
+
+            if (event.key === 'Escape') {
+                event.preventDefault();
+                clearDisplay();
+                return;
+            }
+
+            if (!allowedKeys.includes(event.key)) {
+                event.preventDefault();
+                alert("Invalid key pressed. Please use numbers, operators, or Backspace/Delete.");
+            }
+        });
+
+        function memoryAdd() {
+            try {
+                memory += parseFloat(displayEl.value);
+                clearDisplay();
+            } catch (error) {
+                displayEl.value = "Error";
+            }
+        }
+
+        function memorySubtract() {
+            try {
+                memory -= parseFloat(displayEl.value);
+                clearDisplay();
+            } catch (error) {
+                displayEl.value = "Error";
+            }
+        }
+
+        function memoryClear() {
+            memory = 0;
+            clearDisplay();
+        }
+
+        function memoryRecall() {
+            clearDisplay();
+            displayEl.value = memory.toString();
+        }
+
+        // Functionality to clear the display when Shift + Delete is pressed
+        // let keysPressed = {};
+        //
+        // displayEl.addEventListener('keydown', (event) => {
+        //     keysPressed[event.key] = true;
+        // });
+        //
+        // displayEl.addEventListener('keyup', (event) => {
+        //     delete keysPressed[event.key];
+        // });
+        //
+        // displayEl.addEventListener('keydown', (event) => {
+        //     keysPressed[event.key] = true;
+        //     if (keysPressed['Shift'] && event.key == 'Delete') {
+        //         clearDisplay();
+        //     }
+        // });
+        //
+        // displayEl.addEventListener('keyup', (event) => {
+        //     delete keysPressed[event.key];
+        // });
+
     </script>
 </body>
 </html>
