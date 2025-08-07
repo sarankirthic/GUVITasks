@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Employee Details</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<h1>Employee Details</h1>
+<div th:if="${employee != null}">
+    <p><strong>Employee ID:</strong> <span th:text="${employee.employeeId}"></span></p>
+    <p><strong>Email:</strong> <span th:text="${employee.employeeEmail}"></span></p>
+    <p><strong>Location:</strong> <span th:text="${employee.location}"></span></p>
+</div>
+<div th:if="${employee == null}">
+    <p th:text="${message}"></p>
+</div>
+<p>
+    <a th:href="@{/displayAll}">Back to List</a>
+    |
+    <a th:href="@{/}">Add New Employee</a>
+</p>
+</body>
+</html>
